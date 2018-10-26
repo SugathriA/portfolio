@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Miniport by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body>
+	<!--	<div class="navback">
+		<a href="index.html"><img src="images/arrows.png" />BACK</a>
+	</div>-->
+
+	<!-- <div class="wrapper inside ux">-->
+	<!--		<article class="container">-->
+	<!--		<div>-->
+	<!-- <header>-->
+	<!--			<h1 class="pagetitle">User Experience Design</h1>-->
+	<!--</header>-->
+	<!--	</div>-->
+	<!--		</article>-->
+	<!--</div>-->
+	<nav id="navback">
+		<ul class="container">
+			<a href="index.html">BACK</a>
+		</ul>
+
+	</nav>
+
+	<div class="wrapper style2">
+		<div class="arrows">
+			<div class="arrow-left"></div>
+			<div class="proj-nums">
+				<span id="min_page"></span>
+				<span id="slash">/</span>
+				<span id="max_page"></span>
+			</div>
+			<div class="arrow-right"></div>
+		</div>
+		<div>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+				standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+				type s</p>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="slideshow-container">
+	</div>
+	<!-- Portfolio -->
+	<div class="wrapper style3" id="1">
+		<div class="container" id="Design Process">
+			<div class="row">
+				<div class="titles">
+					<h4>What is the significance of this Project?</h4>
+					<p>Cisco Virtual Topology System (VTS), is a product that automates data center operations. In the existing UI for
+						Cisco VTS, user has to traverse the navigation to get the overlay object that needs to be managed and deal with
+						complex UI forms. There is a huge scope to improve the user experience by using natural langugage assistant in
+						this product.</p>
+					<h4>Who are the target audience and what is the design problem being solved?</h4>
+					<P>In the current VTS UI, Service Provider administrator (SP Admin such as Verizon, Telstra) is the target user.
+					</p>
+					<p>Any overlay object configuration is complicated to solve. As an example I am using the task of attaching port
+						to network. Attaching port to a network enables the network in a data center. <br />
+						To achieve this user has to:
+						<ul>
+							<li>Select the tenant.</li>
+							<li> Select the desired network. </li>
+							<li>Select the device. </li>
+							<li>Select the port on device. </li>&nbsp;
+						</ul>
+						This involves many traversal, clicks, selections to find the right port.Below are some screenshots from UI
+						depicting the flow. </p>
+					</p>
+					<a href="#" class="image featured"><img src="images/ux/port_attach_storyboard.png" alt="" /></a>
+					<h4>What is the proposed solution and what is my role in it?</h4>
+					<p>The proposed solution was designing a mobile application that is voice enabled. This natural language voice
+						assistant app lets the user accomplish this task without having to navigate and find the right network and port.
+						All user needs to do is take the assistance of app prompts and respond.</p>
+					<p>I proposed this idea and came up with this video as a proof of concept.</p>
+					<video controls class="image featured">
+						<source src="images/voice_app.mp4" type="video/mp4">
+					</video>
+
+					<h4>What is cool about this solution?</h4>
+					<p>This solution helps in overcoming the complexity of managing data center objects with an interactive natural
+						language voice assistant where users can initiate a task. The applicaion then prompts for information to supply
+						or initiate the next command. It displays context of the command and status of the object. That way user can view
+						the interactions of each step in a visual way and intuitively complete it. This eliminates complex traversal in
+						the navigation to get to the right object to configure, eliminates the need to go to CLI or use complex UI forms,
+						gain an ability to see information in-context, and know if the task can be successful much earlier.Cisco patent
+						was filed for this design.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper style3" id="2">
+		<div class="container" id="Design Process">
+			<div class="row">
+				<div class="titles">
+					<h4>What is the significance of this Project?</h4>
+					<p>Cisco Virtual Topology System (VTS), is a product that automates data center operations. There was a feature
+						request that allows users to spawn Virtual Machines(VMs). This is a very data intense, complex problem to solve
+						and the solution has to scalable irrespective of the number of devices in a data center. </p>
+					<h4>Who are the target audience and what is the design problem being solved?</h4>
+					<P>In the current VTS UI, Service Provider administrator (SP Admin such as Verizon, Telstra) is the target user.
+					</p>
+					<p>A data center typically consists of devices (switches). Each switch can have 1-13 modules. Each module has 48
+						ports also called as interfaces. The challange in this problem is the scale. There could be up to 156 devices in
+						a data center. User can select any number of devices and any number of ports and define any number of ranges.
+						Also in a scenario where user needs to edit, information related to devices, interfaces and ranges should be
+						displayed in order to make any changes. </p>
+					<h4>What is the proposed solution and what is my role in it?</h4>
+					<p>The proposed solution was to build a work flow in the UI that addresses the problem and visual represention of
+						the interfaces in both Define and Edit scenarios. User has to first define a group. Select one or more devices.
+						Select interfaces per device. Assign some ranges. Now VMs can be spawned in this range in the data center.</p>
+					<p> My role in providing this solution is white boarding to gather these requirements and understand the
+						scenarios. Story boarding the flow. Providing several design options and discussing with product team,
+						architects, developers and iterating designs based on their feedback. Providing high fidelity Mock ups and
+						redline specs for the final design.</p>
+					<a href="#" class="image featured"><img src="images/desprovts_image1.png" alt="" /></a>
+					<a href="#" class="image featured"><img src="images/desprovts_image2.png" alt="" /></a>
+					<a href="#" class="image featured"><img src="images/desprovts_image3.png" alt="" /></a>
+					<a href="#" class="image featured"><img src="images/desprovts_image4.png" alt="" /></a>
+					<h4>What is cool about this solution?</h4>
+					<p>This work flow solution helps in dealing with the scale as it is broken in to several steps. At each step user
+						is only dealing with one step of data. Also the visual representation of selected device ports, helps user
+						identify them quickly. Cisco patent was filed for this design.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper style3" id="3">
+		<div class="container">
+			<div class="row">
+				<div class="titles">
+					<h4>What is the significance of this Project?</h4>
+					<p>Cisco All In One (AIO) is a product that is used to manage Cisco Virtually Managed Services (VMS) deployment
+						environments. The current UI had to be redesigned enhancing the user experience. </p>
+					<a href="#" class="image featured"><img src="images/desproaio_image1.png" alt="" /></a>
+					<h4>Who are the target audience and what is the design problem being solved?</h4>
+					<P>In the current AIO UI, VMS deployments administrator is the target user. </p>
+					<P>There are many usability issues, pain points in the current UI. Many tasks are not in context. No consistency
+						in language. No help on the complex UI forms. Lot of data on one page with no search functionality. All these
+						issues have to be addressed and an efficient and enjoyable experience should be built. </p>
+					<a href="#" class="image featured"><img src="images/desproaio_image2.png" alt="" /></a>
+					<h4>What is the proposed solution and what is my role in it?</h4>
+					<p>The proposed solution was to show an overview of AIOs that helps user to make decisions on what AIO should be
+						used. Moving all actions related to AIO at one place. Cleaning up the forms and adding ghost text. Combining the
+						related tasks to simplify and avoid clutter in design.</p>
+					<p>My role in providing this solution is identifying pain points using heuristic evaulation. Conducting task
+						analysis to realize efficiency of each task. Coming up with several design options and conducting usability
+						studies with the users. Iterating to provide final design.</p>
+					<a href="#" class="image featured"><img src="images/desproaio_image3.png" alt="" /></a>
+					<a href="#" class="image featured"><img src="images/desproaio_image4.png" alt="" /></a>
+					<h4>What is cool about this solution?</h4>
+					<p>The solution is not only easy to use but has greatly benefited the admin users in quickly identifying the
+						isssues with AIOs. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper style3" id="4">
+		<div class="container">
+			<div class="row">
+				<div class="titles">
+					<h4>What is the significance of this Project?</h4>
+					<p>Cisco Virtual Topology System (VTS), is a product that automates data center operations. Many new features
+						are added to the product at a fast pace. Everytime new features are added user being able to find them with
+						ease is critical in the product. The task of validating the current navigation with users was taken up. </p>
+					<h4>Who are the target audience and what is the design problem being solved?</h4>
+					<P>In the current VTS UI, Service Provider administrator (SP Admin such as Verizon, Telstra) is the target user.
+					</p>
+					<P>New and returning users should be able to navigate through product with ease. Making navigation disoverable,
+						accessible and contextual is challenging. </P>
+					<h4>What is the proposed solution and what is my role in it?</h4>
+					<p>The proposed solution was to put forward a navigation that is consistent, strives for flat navigation and
+						imitates the structure of data center in real world.</p>
+					<p>My role in this exercise was conducting in-person interviews, using online Optimal cardsort technique and
+						anyzing the results provided by all users. Based on the results proposing an efficient navigation system.</p>
+					<a href="#" class="image featured"><img src="images/IA.jpg" alt="" /></a>
+					<h4>What is cool about this solution?</h4>
+					<p>This navigation enhaces the usability of the product. This makes the product very simple, usable and lets
+						user accomplish tasks efficiently. Lot of back and forth is avoided in the solution and all the UI problems
+						buried underneath because of platform constraints are addressed. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper style3" id="5">
+		<div class="container">
+
+			<div class="row">
+				<div class="row">
+					<div class="titles">
+						<h4>What is the significance of this Project?</h4>
+						<p>As a designer the most important thing is to be empathetic towards users, know the users and think fron
+							their point of view. Here are a few examples from different projects where I have worked on identifying
+							Personas, their goals, roles and behaviors. </p>
+						<h4>Who are the target audience and what is the design problem being solved?</h4>
+						<P>Each of the projects below have different target audience. They are broadly classified in the persona
+							types.</p>
+						<P>The challenging part is to identify how the users interact with the product, the usage patterns in
+							different scenarios, user behaviors, roles and goals. </P>
+						<h4>What is the proposed solution and what is my role in it?</h4>
+						<p>Below are the personas I created for three different Projects.</p>
+						<p>My role in this exercise was conducting in-person interviews, surveys, data anlytics etc to know the users.
+							working with user researchers to find patterns of usage by users. Define the personas. Document the Personas.
+						</p>
+						<a href="#" class="image featured"><img src="images/personas.jpg" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/skel-viewport.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		// pagination min and max value declaration
+		var pagination_min_val = 1;
+		var pagination_max_val = 5;
+		// pagination min and max value DOM selections
+		var min_page_val = document.getElementById('min_page');
+		var max_page_val = document.getElementById('max_page');
+		// min and max value assignment to the DOM selections
+		min_page_val.innerHTML = pagination_min_val;
+		max_page_val.innerHTML = pagination_max_val;
+		// arrow selectors
+		var arrow_left = document.getElementsByClassName('arrow-left')[0];
+		var arrow_right = document.getElementsByClassName('arrow-right')[0];
+
+		updateArrowState(pagination_min_val);
+
+		// left arrow selector click handler event
+		arrow_left.addEventListener('click', function () {
+			if (pagination_min_val > 1) {
+				pagination_min_val--;
+				min_page_val.innerHTML = pagination_min_val;
+				updateArrowState(pagination_min_val);
+			}
+		});
+		// right arrow selector click handler event
+		arrow_right.addEventListener('click', function () {
+			if (pagination_min_val < pagination_max_val) {
+				pagination_min_val++;
+				min_page_val.innerHTML = pagination_min_val;
+				updateArrowState(pagination_min_val);
+			}
+		});
+
+		function updateArrowState(val) {
+			if (val === 1) {
+				arrow_left.classList.add("disable");
+			} else {
+				arrow_left.classList.remove("disable")
+			}
+
+			if (val === 5) {
+				arrow_right.classList.add("disable");
+			} else {
+				arrow_right.classList.remove("disable");
+			}
+		}
+
+	</script>
+</body>
+
+</html>
