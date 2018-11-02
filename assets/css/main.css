@@ -1711,6 +1711,18 @@
 				cursor: default;
 				box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 			}
+
+			#navback .ixd {
+				background-color: #FEDD6D;
+				text-align: left;
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: 10000;
+				cursor: default;
+				box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+			}
 			#navback a {
 				position: relative;
 				display: block;
@@ -2236,4 +2248,52 @@
 	display: block;
 	text-align: left;
 	text-shadow: none;
+	margin-bottom: 1.25em;
 }
+
+.titles li
+{
+	text-align: left;
+	margin-left: 20px;
+	list-style-type: disc;
+}
+
+.slide-show.inactive {
+	display: none;
+}
+
+/* Fading animation */
+.slide-show.inactive {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 3s;
+	animation-name: fade;
+	animation-duration: 3s;
+  }
+
+  @-webkit-keyframes fade {
+	0% {
+		left: 0%;
+	}
+
+	50% {
+		left: -50%;
+	}
+
+	100% {
+		left: -100%;
+	}
+  }
+
+  @keyframes fade {
+	0% {
+		left: 0%;
+	}
+
+	50% {
+		left: -50%;
+	}
+
+	100% {
+		left: -100%;
+	}
+  }
