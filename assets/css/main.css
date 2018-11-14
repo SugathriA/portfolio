@@ -2371,6 +2371,17 @@
 .banner-highlight.ux {
 	background-color: #a9edda;
 }
+
+.video_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.video_container .iphone {
+	width: 414px;
+}
 	/*#navback a {
 		position: relative;
 		display: block;
