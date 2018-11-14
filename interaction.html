@@ -29,20 +29,36 @@
 					<!-- Home -->
 
 
-					<nav id="navback">
-						<div class="ixd">
-						<ul class="container">
-							<a href="index.html">BACK</a>
-						</div>	
-						</ul>
-					</nav>
+		<nav id="navback" class="others">
+			<div>
+				<ul class="container">
+					<a href="index.html">BACK</a>
+				</ul>
+			</div>
 
-		 <!-- Portfolio -->
-			<div class="wrapper style3">
+			<div class="arrows">
+				<div class="arrow-left disable"></div>
+				<div class="proj-nums">
+					<span id="min_page"></span>
+					<span id="slash">/</span>
+					<span id="max_page"></span>
+				</div>
+				<div class="arrow-right"></div>
+			</div>
+
+			<div class="slideshow-container"></div>
+		</nav>
+
+		<div class="main-container">
+			<!-- Portfolio -->
+			<div class="wrapper style3 slide-show active" id="1">
 				<!--<article id="portfolio">-->
 					<div class="container">
 						<div class="row">
-							<P> Interaction video for a feature in Cisco's Intercloud Services </P>
+							<div class="main">
+								 		<p>Cisco Intercloud Services - Admin adding user</p>
+							</div>
+
 							<video controls class="image featured">
 								<source src="images/Add_User.m4v" type="video/mp4">
 							</video>
@@ -50,12 +66,13 @@
 					</div>
 			</div>
 
-
-
-			<div class="wrapper style3">
+			<div class="wrapper style3 slide-show inactive" id="2">
 				<!--<article id="portfolio">-->
 					<div class="container">
 						<div class="row">
+							<div class="main">
+								 		<p>Cisco Intercloud Services - User registering</p>
+							</div>
 							<video controls class ="image featured">
 								<source src="images/User_Registers.mp4" type="video/mp4">
 							</video>
@@ -63,10 +80,13 @@
 					</div>
 			</div>
 
-			<div class="wrapper style3">
+			<div class="wrapper style3 slide-show inactive" id="3">
 				<!--<article id="portfolio">-->
 					<div class="container">
 						<div class="row">
+							<div class="main">
+								 		<p>Cisco Virtually Managed Services - Profile creation</p>
+							</div>
 							<video controls class ="image featured">
 								<source src="images/Profile.mp4" type="video/mp4">
 							</video>
@@ -74,20 +94,21 @@
 					</div>
 			</div>
 
-			<div class="wrapper style3">
+			<div class="wrapper style3 slide-show inactive" id="4">
 				<!--<article id="portfolio">-->
 					<div class="container">
 						<div class="row">
-							<video controls class ="image featured">
+							<div class="main">
+								 		<p>Cisco Virtual Topology System - Monitoring application</p>
+							</div>
+							<video controls class="image featured">
 								<source src="images/Infra_Mobile.mp4" type="video/mp4">
 							</video>
 
 						</div>
 					</div>
 			</div>
-
-
-
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -97,6 +118,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/slideshow.js"></script>
 
 	</body>
 </html>

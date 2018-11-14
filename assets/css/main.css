@@ -108,7 +108,6 @@
 		.container {
 			width: 1200px;
 		}
-
 	}
 
 	@media screen and (min-width: 737px) and (max-width: 1200px) {
@@ -159,6 +158,16 @@
 
 		.container {
 			width: 100% !important;
+		}
+
+		#navback a {
+			position: relative;
+			display: block;
+			color: #FFFFFF;
+			text-decoration: none;
+			outline: 0;
+			font-weight: 600;
+			margin-left: 20px;
 		}
 
 	}
@@ -1169,7 +1178,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 	.projdesc{
@@ -1701,18 +1710,36 @@
 			}
 
 			#navback {
-				background-color: #a9edda;
 				text-align: left;
 				position: fixed;
 				left: 0;
 				top: 0;
+				padding: 10px 0 0 0;
 				width: 100%;
 				z-index: 10000;
 				cursor: default;
 				box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 			}
 
-			#navback .ixd {
+			.ux {
+				background-color: #a9edda;
+			}
+
+			.ixd {
+				background-color: #FEDD6D;
+			}
+
+			.vd {
+				background-color: #FFB5E8;
+			}
+
+			.others {
+				background-color: #282828;
+			}
+
+
+
+			/*#navback .ixd {
 				background-color: #FEDD6D;
 				text-align: left;
 				position: fixed;
@@ -1722,13 +1749,27 @@
 				z-index: 10000;
 				cursor: default;
 				box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-			}
+			}*/
+
+			/*#navback .vd {
+				background-color: #FFB5E8;
+				text-align: left;
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: 10000;
+				cursor: default;
+				box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+			}*/
+
 			#navback a {
 				position: relative;
 				display: block;
 				color: #FFFFFF;
 				text-decoration: none;
 				outline: 0;
+				font-weight: 600;
 			}
 
 			#navback a:hover {
@@ -2193,11 +2234,17 @@
 		padding-left: 20px;
 	}
 
-	.arrows
-	{
+	.arrows {
 		display: flex;
 		justify-content: center;
-		min-height:
+		height: 140px;
+		background-color: #FFF;
+		align-items: center;
+	}
+
+	.arrows .proj-nums {
+		display: flex;
+		justify-content: center;
 	}
 
 	.arrow-left {
@@ -2205,14 +2252,14 @@
 	height: 0;
 	border-bottom: 20px solid transparent;  /* left arrow slant */
 	border-top: 20px solid transparent; /* right arrow slant */
-	border-right: 20px solid #555; /* bottom, add background color here */
+	border-right: 20px solid #282828; /* bottom, add background color here */
 }
 
 .arrow-right {
 	width: 0;
 	height: 0;
 	border-top: 20px solid transparent;
-	border-left: 20px solid #555;
+	border-left: 20px solid #282828;
 	border-bottom: 20px solid transparent;
 }
 
@@ -2233,6 +2280,19 @@
 .titles
 {
 	display: block;
+}
+
+.main {
+	display:block;
+	float: none;
+}
+
+.main p{
+	font-size: 150%;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: none;
+	color: #282828;
 }
 
 .titles h4
@@ -2256,6 +2316,10 @@
 	text-align: left;
 	margin-left: 20px;
 	list-style-type: disc;
+}
+
+.main-container {
+	margin-top: 100px;
 }
 
 .slide-show.inactive {
@@ -2297,3 +2361,21 @@
 		left: -100%;
 	}
   }
+
+.banner-highlight {
+	margin: 5px 0;
+	padding: 0 5px;
+	color: #888;
+}
+
+.banner-highlight.ux {
+	background-color: #a9edda;
+}
+	/*#navback a {
+		position: relative;
+		display: block;
+		color: #FFFFFF;
+		text-decoration: none;
+		outline: 0;
+		font-weight: 600;
+	}*/
