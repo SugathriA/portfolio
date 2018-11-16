@@ -2237,7 +2237,7 @@
 	.arrows {
 		display: flex;
 		justify-content: center;
-		height: 140px;
+		height: 72px;
 		background-color: #FFF;
 		align-items: center;
 	}
@@ -2288,8 +2288,9 @@
 }
 
 .main p{
-	font-size: 150%;
-	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1.75em;
+	/*font-weight: bold*/
 	text-align: center;
 	text-shadow: none;
 	color: #282828;
