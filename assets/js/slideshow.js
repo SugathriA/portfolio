@@ -1,61 +1,64 @@
-// slide-show selection
-var sliders = document.getElementsByClassName('slide-show');
-console.log(sliders);
-// pagination min and max value declaration
-var pagination_min_val = 1;
-var pagination_max_val = sliders.length;
-// pagination min and max value DOM selections
-var min_page_val = document.getElementById('min_page');
-var max_page_val = document.getElementById('max_page');
-// min and max value assignment to the DOM selections
-min_page_val.innerHTML = pagination_min_val;
-max_page_val.innerHTML = pagination_max_val;
-// arrow selectors
-var arrow_left = document.getElementsByClassName('arrow-left')[0];
-var arrow_right = document.getElementsByClassName('arrow-right')[0];
+(function(){
+  // slide-show selection
+  var sliders = document.getElementsByClassName("slide-show");
+  var circle_container = document.getElementById("circle_container");
 
-// left arrow selector click handler event
-arrow_left.addEventListener('click', function () {
-  if (pagination_min_val > 1) {
-    pagination_min_val--;
-    min_page_val.innerHTML = pagination_min_val;
-    updateArrowState(pagination_min_val);
-  }
-});
-// right arrow selector click handler event
-arrow_right.addEventListener('click', function () {
-  if (pagination_min_val < pagination_max_val) {
-    pagination_min_val++;
-    min_page_val.innerHTML = pagination_min_val;
-    updateArrowState(pagination_min_val);
-  }
-});
+  console.log(sliders);
 
-function updateArrowState(val) {
-  if (val === 1) {
-    arrow_left.classList.add("disable");
-  } else {
-    arrow_left.classList.remove("disable")
+  for (var i = 0; i < sliders.length; i++) {
+    var node = document.createElement("div");
+    node.className = "p_circle";
+    node.id = "c_" + i;
+    node.number = i;
+    if(i===0) node.classList.add("active");
+    circle_container.appendChild(node);
   }
 
-  if (val === pagination_max_val) {
-    arrow_right.classList.add("disable");
-  } else {
-    arrow_right.classList.remove("disable");
+  var circles = document.getElementsByClassName("p_circle");
+
+  document.addEventListener("click", function(e) {
+    if (e.target && e.target.className == "p_circle") {
+      computeScrollDirection(e.target.number);
+    }
+  });
+
+  function computeScrollDirection(new_val) {
+    var currentSlide = document.getElementsByClassName("slide-show active")[0];
+    var currentActiveCircle = null;
+
+    var old_val = currentSlide.id;
+
+    if (new_val > old_val) {
+      // slide right
+      currentActiveCircle = document.getElementsByClassName("p_circle active")[0];
+      updateCarousel(currentSlide, currentActiveCircle, new_val, "right");
+    }
+
+    if (new_val < old_val) {
+      // slide left
+      currentActiveCircle = document.getElementsByClassName("p_circle active")[0];
+      updateCarousel(currentSlide, currentActiveCircle, new_val, "left");
+    }
   }
 
-  updateCarousel(val);
-}
+  function updateCarousel(currentSlide, currentActiveCircle, val, direction) {
+    var circles = document.getElementsByClassName("p_circle");
+    // remove active class for current active slide
+    // remove active class for circle
+    // clear slide direction class
+    currentSlide.classList.remove("active");
+    currentSlide.classList.remove("slide-right", "slide-left");
+    currentSlide.classList.add("inactive");
+    currentActiveCircle.classList.remove("active");
 
-function updateCarousel(val) {
-  // val - 1 since the index of slide_show starts from 0
-  var currentSlide = document.getElementsByClassName("active")[0];
-  currentSlide.classList.remove("active");
-  currentSlide.classList.add("inactive");
-  // currentSlide[0].classList.remove("active");
-  // currentSlide[0].classList.add("inactive");
-  console.log(sliders[val - 1]);
-  sliders[val - 1].classList.remove("inactive");
-  sliders[val - 1].classList.add("active");
-  // sliders[val - 1].classList.add("slidy");
-}
+    // add active class for the new slide
+    // add active class for the new circle 
+    // add slide direction class  
+    sliders[val].classList.remove("inactive");
+    circles[val].classList.remove("inactive");
+    circles[val].classList.add("active");
+    direction === "right"
+      ? sliders[val].classList.add("active", "slide-right")
+      : sliders[val].classList.add("active", "slide-left");
+  }
+}());

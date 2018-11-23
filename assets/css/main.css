@@ -24,6 +24,8 @@
 
 	body {
 		line-height: 1;
+		background-color: #f4f4f4;
+		background-image: url("images/bg.png");
 	}
 
 	ol, ul {
@@ -1612,12 +1614,12 @@
 /* Wrappers */
 .wrapper inside{
 	background-image: url("images/bg.png");
-	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+	/* box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
 }
 
 	.wrapper {
 		background-image: url("images/bg.png");
-		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		/* box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
 	}
 
 		.wrapper.first {
@@ -2234,48 +2236,40 @@
 		padding-left: 20px;
 	}
 
-	.arrows {
-		display: flex;
-		justify-content: center;
-		height: 72px;
-		background-color: #FFF;
-		align-items: center;
-	}
-
-	.arrows .proj-nums {
+	/* .arrows .proj-nums {
 		display: flex;
 		justify-content: center;
 	}
 
-	.arrow-left {
-	width: 0;
-	height: 0;
-	border-bottom: 20px solid transparent;  /* left arrow slant */
-	border-top: 20px solid transparent; /* right arrow slant */
-	border-right: 20px solid #282828; /* bottom, add background color here */
-}
+		.arrow-left {
+		width: 0;
+		height: 0;
+		border-bottom: 20px solid transparent;
+		border-top: 20px solid transparent;
+		border-right: 20px solid #282828;
+	}
 
-.arrow-right {
-	width: 0;
-	height: 0;
-	border-top: 20px solid transparent;
-	border-left: 20px solid #282828;
-	border-bottom: 20px solid transparent;
-}
+	.arrow-right {
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-left: 20px solid #282828;
+		border-bottom: 20px solid transparent;
+	}
 
-.arrow-left.disable {
-	pointer-events: none;
-	border-right: 20px solid #ddd;
-}
+	.arrow-left.disable {
+		pointer-events: none;
+		border-right: 20px solid #ddd;
+	}
 
-.arrow-right.disable {
-	pointer-events: none;
-	border-left: 20px solid #ddd;
-}
+	.arrow-right.disable {
+		pointer-events: none;
+		border-left: 20px solid #ddd;
+	}
 
-.proj-nums {
-	width: 300px;
-}
+	.proj-nums {
+		width: 300px;
+	} */
 
 .titles
 {
@@ -2328,14 +2322,14 @@
 }
 
 /* Fading animation */
-.slide-show.inactive {
+/* .slide-show.inactive {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 3s;
 	animation-name: fade;
 	animation-duration: 3s;
-  }
+  } */
 
-  @-webkit-keyframes fade {
+  /* @-webkit-keyframes fade {
 	0% {
 		left: 0%;
 	}
@@ -2361,7 +2355,7 @@
 	100% {
 		left: -100%;
 	}
-  }
+  } */
 
 .banner-highlight {
 	margin: 5px 0;
@@ -2391,3 +2385,99 @@
 		outline: 0;
 		font-weight: 600;
 	}*/
+
+.slide-show.active {
+position: absolute;
+}
+
+
+.arrows {
+	display: flex;
+	justify-content: center;
+	height: 72px;
+	background-color: #FFF;
+	align-items: center;
+}
+
+/* @-webkit-keyframes fade {
+0% {
+	left: 0%;
+}
+
+50% {
+	left: -50%;
+}
+
+100% {
+	left: -100%;
+}
+} */
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+@-webkit-keyframes left {
+	0% {
+		left: -80%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes left {
+	0% {
+		left: -80%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+.slide-left {
+	animation: left 0.5s normal forwards ease-in-out;
+}
+.slide-right {
+	animation: right 0.5s normal forwards ease-in-out;
+}
+
+
+
+@-webkit-keyframes right {
+	0% {
+		left: 80%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes right {
+	0% {
+		left: 80%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+.p_circle {
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+	margin: 0 10px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+.p_circle.active {
+	background-color: #2b2b2b;
+}
+
+#circle_container {
+	display: flex;
+	justify-content: center;
+}
