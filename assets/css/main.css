@@ -1932,7 +1932,7 @@
 		/* Wrappers */
 
 			.wrapper {
-				padding: 8em 0 8em 0;
+				padding: 3em 0 8em 0;
 				text-align: center;
 			}
 
@@ -2464,20 +2464,36 @@ position: absolute;
 }
 
 .p_circle {
-	width: 10px;
-	height: 10px;
-	background-color: #FFF;
+	width: 20px;
+	height: 20px;
+	background-color: #cccccc;
 	margin: 0 10px;
 	border-radius: 50%;
-	border: 1px solid #000;
+	/*border: 1px solid #000;*/
 	cursor: pointer;
 }
 
-.p_circle.active {
-	background-color: #2b2b2b;
-}
+/*.p_circle.active {
+	background-color: #38D4B1;
+}*/
 
 #circle_container {
 	display: flex;
 	justify-content: center;
+}
+
+#circle_container.green .p_circle.active{
+	background-color: #38D4B1;
+}
+
+#circle_container.yellow .p_circle.active{
+	background-color: #FFD133;
+}
+
+#circle_container.pink .p_circle.active{
+	background-color: #FF64CF;
+}
+
+#design_process .titles {
+	width: 100%;
 }
