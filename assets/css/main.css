@@ -2497,3 +2497,9 @@ position: absolute;
 #design_process .titles {
 	width: 100%;
 }
+
+.paragraph_headings{
+	
+	color: #222222;
+	font-weight: 300;
+}
