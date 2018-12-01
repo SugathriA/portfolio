@@ -2503,3 +2503,13 @@ position: absolute;
 	color: #222222;
 	font-weight: 300;
 }
+
+.hero_white{
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #FFFFFF;
+  position: relative;
+}
+}
